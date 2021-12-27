@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+
+    <servlet>
+        <servlet-name>MyServlet</servlet-name>
+        <servlet-class>net.kiranatos.servlet.GetIndexPageServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>MyServlet</servlet-name>
+        <url-pattern>/</url-pattern> <!-- '/' соответсвует http://localhost:8080/ -->
+    </servlet-mapping>
+</web-app>
+<!--
+1. Tomcat в <servlet-mapping> находит по адрессу <url-pattern> соответсвующий сервлет 
+с именем в <servlet-name>
+2. Потом в <servlet> находит соответсвующий класс в <servlet-class>, которому нужно 
+передать данные от пользователя/сервера в нашу программу на обработку.
+-->

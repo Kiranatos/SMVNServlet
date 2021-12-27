@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+
+    <!--Base page servlet-->
+    <servlet>
+        <servlet-name>GetStartPageServlet</servlet-name>
+        <servlet-class>net.kiranatos.sevlet.GetIndexPageServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>GetStartPageServlet</servlet-name>
+        <url-pattern>/</url-pattern>
+    </servlet-mapping>
+
+    <!--Encoding filter UTF-8 for all requests-->
+    <filter>
+        <filter-name>EncodingRequestFilter</filter-name>
+        <filter-class>net.kiranatos.sevlet.EncodingRequestFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>EncodingRequestFilter</filter-name>
+        <url-pattern>/</url-pattern>
+    </filter-mapping>
+
+    <!--Encoding filter UTF-8 for all requests-->
+    <filter>
+        <filter-name>EncodingResponseFilter</filter-name>
+        <filter-class>net.kiranatos.sevlet.EncodingResponseFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>EncodingResponseFilter</filter-name>
+        <url-pattern>/</url-pattern>
+    </filter-mapping>
+    
+    <filter>
+        <filter-name>MyFilter01</filter-name>
+        <filter-class>net.kiranatos.sevlet.MyFilter01</filter-class>        
+    </filter>
+    <filter-mapping>
+        <filter-name>MyFilter01</filter-name>
+        <url-pattern>/</url-pattern>
+    </filter-mapping>
+    
+    <filter>
+        <filter-name>MyFilter02</filter-name>
+        <filter-class>net.kiranatos.sevlet.MyFilter02</filter-class>        
+    </filter>
+    <filter-mapping>
+        <filter-name>MyFilter02</filter-name>
+        <url-pattern>/</url-pattern>
+    </filter-mapping>
+</web-app>
